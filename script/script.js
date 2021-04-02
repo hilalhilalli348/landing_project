@@ -190,10 +190,10 @@ onClickLinks();
           e.preventDefault();
 
 
-          let link = $(e.target).attr('href');
+          let link = $(e.target).attr('data-link');
 
-          let nav = $(".changeNav").outerHeight() || 0;
-
+          let nav = $(".changeNav").outerHeight() || 110;
+        
           let top_height_link=$(link).position().top-nav;
 
           $(document).scrollTop(top_height_link);

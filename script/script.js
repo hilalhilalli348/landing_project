@@ -33,7 +33,7 @@ scrollspy();
 accor();
 preEvA();
 showMobileNaw();
-
+onClickLinks();
 // slider trigger
     $('.autoplay').slick({
   slidesToShow: 3,
@@ -184,5 +184,22 @@ showMobileNaw();
 
     }
 
+
+    function onClickLinks(){
+      $('#nav>li>a').on('click',(e)=>{
+          e.preventDefault();
+
+
+          let link = $(e.target).attr('href');
+
+          let nav = $(".changeNav").outerHeight() || 0;
+
+          let top_height_link=$(link).position().top-nav;
+
+          $(document).scrollTop(top_height_link);
+
+
+      })
+    }
 
 });

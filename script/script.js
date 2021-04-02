@@ -186,7 +186,7 @@ onClickLinks();
 
 
     function onClickLinks(){
-      $('#nav>li>a').on('click',(e)=>{
+      $('.lnks>li>a').on('click',(e)=>{
           e.preventDefault();
 
 
